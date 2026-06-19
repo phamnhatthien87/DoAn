@@ -35,7 +35,7 @@ public class UserDAO {
                     return null;
                 }
 
-                if (!PasswordUtil.isHashed(storedPassword)) {
+                if (!PasswordUtil.isSha256Hash(storedPassword)) {
                     updatePasswordHash(id, PasswordUtil.hashPassword(password));
                 }
 
