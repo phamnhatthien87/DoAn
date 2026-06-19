@@ -1,7 +1,6 @@
 package model;
 
 import java.time.LocalDate;
-// class lưu trữ dữ liệu( ngày mượn,người mượn, ngày trả,...)
 public class Borrowing {
     private int id;
     private int userId;

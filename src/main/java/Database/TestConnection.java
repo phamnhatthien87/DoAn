@@ -13,7 +13,6 @@ public class TestConnection {
             System.out.println(" Kết nối database thất bại ");
         }
 
-        // Đóng kết nối
         try {
             if (conn != null) {
             }

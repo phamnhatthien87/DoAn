@@ -5,9 +5,7 @@ import java.sql.*;
 import java.time.LocalDate;
 
 public class StatisticDAO {
-    // class thống kê số lượng mượn sách
 
-    //hàm đếm số lượng sách mượn theo ngày
     public int byDate(LocalDate d) {
         String sql = "SELECT COUNT(*) FROM Borrowings WHERE borrowDate=?";
         try (Connection c = ConnectDB.getConnection();
@@ -18,7 +16,6 @@ public class StatisticDAO {
         } catch (Exception e) {}
         return 0;
     }
-    //Đếm số lượt mượn sách trong một tháng của một năm
     public int byMonth(int m, int y) {
         String sql = "SELECT COUNT(*) FROM Borrowings WHERE MONTH(borrowDate)=? AND YEAR(borrowDate)=?";
         try (Connection c = ConnectDB.getConnection();
